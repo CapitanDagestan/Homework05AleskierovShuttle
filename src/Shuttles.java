@@ -6,7 +6,10 @@ public class Shuttles {
         int[] lucky = {1, 2, 3, 5, 6, 7, 8};
         int[] luckyNull = {0, 1, 2, 3, 5, 6, 7, 8};
         for (int i = 0; i < 100; i++) {
-            int[] shuttleNum = {lucky[random.nextInt(7)], luckyNull[random.nextInt(8)], luckyNull[random.nextInt(8)]};
+            int r = random.nextInt(7);
+            int r1 = random.nextInt(8);
+            int r2 = random.nextInt(8);
+            int[] shuttleNum = {lucky[r], luckyNull[r1], luckyNull[r2]};
             System.out.println(String.valueOf(shuttleNum[0]) + shuttleNum[1] + shuttleNum[2]);
         }
     }
